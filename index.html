@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Makeup Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f0f0f;
+color:#fff;
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav h1{
+font-size:18px;
+letter-spacing:2px;
+color:#d4af37;
+}
+
+nav a{
+color:#fff;
+margin-left:15px;
+text-decoration:none;
+font-size:13px;
+opacity:0.8;
+}
+
+nav a:hover{
+color:#d4af37;
+opacity:1;
+}
+
+/* HERO */
+.hero{
+  height:120vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:url('aaaa.jpeg') center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  position:relative;
+}
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+}
+
+.hero h2{
+font-size:42px;
+color:#fff;
+}
+
+.hero p{
+margin-top:10px;
+opacity:0.8;
+}
+
+.btn{
+margin-top:20px;
+padding:12px 25px;
+background:#d4af37;
+border:none;
+color:#000;
+font-weight:bold;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* SECTIONS */
+section{
+padding:80px 10%;
+}
+
+.title{
+text-align:center;
+font-size:28px;
+margin-bottom:40px;
+color:#d4af37;
+}
+
+/* ABOUT */
+.about{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+align-items:center;
+}
+
+.about img{
+width:280px;
+border-radius:10px;
+}
+
+.about p{
+flex:1;
+line-height:1.8;
+opacity:0.85;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.card{
+background:#1a1a1a;
+padding:20px;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+background:#222;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:10px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* FORM */
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+input, textarea{
+padding:12px;
+border:none;
+border-radius:5px;
+outline:none;
+}
+
+textarea{
+height:120px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+opacity:0.6;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h1>NB Vision Studio</h1>
+<div>
+<a href="#about">შესახებ</a>
+<a href="#services">სერვისები</a>
+<a href="#gallery">ნამუშევრები</a>
+<a href="#booking">ჩაწერა</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+<h2>პროფესიონალი Makeup Artist</h2>
+<p>ხაზი გაუსვი შენს ბუნებრივ სილამაზეს ელეგანტურად</p>
+<button class="btn" onclick="document.getElementById('booking').scrollIntoView()">ჩაწერა</button>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="title">მის შესახებ</h2>
+<div class="about">
+<img src="photo-naniko.jpeg"/>
+<p>
+მე ვარ კვალიფიცირებული ვიზაჟისტი, მაქვს როგორც სალონური, ასევე ფეშენ ვიქებზე მუშაობის გამოცდილება, მათ შორის Mercedes-Benz Fashion Week-სა და სხვა მნიშვნელოვან პროექტებზე. მუდმივად ვვითარდები პროფესიულად და მაქვს ცოდნა სახისა და ფერების ანალიტიკაში, რაც მაძლევს შესაძლებლობას თითოეულ ადამიანს ინდივიდუალურად მოვარგო მაკიაჟი. სურვილის შემთხვევაში შეგიძლიათ გაიკეთოთ სატესტო მაკიაჟი, სადაც თავად ნახავთ ჩემს გამოცდილებასა და შესაძლებლობებს. 💙💄
+</p>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<h2 class="title">სერვისები</h2>
+<div class="services">
+<div class="card">საქორწილო მაკიაჟი</div>
+<div class="card">საღამოს ლუქი</div>
+<div class="card">ფოტოსესია</div>
+<div class="card">ბუნებრივი მაკიაჟი</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<h2 class="title">ნამუშევრები</h2>
+<div class="gallery">
+<img src="image-6.jpg"/>
+<img src="image-7.jpg"/>
+<img src="image-8.jpg"/>
+<img src="image-9.jpg"/>
+<img src="image-10.jpg"/>
+<img src="im-1.jpg"/>
+<img src="im-3.jpg"/>
+<img src="im-4.jpg"/>
+</div>
+</section>
+
+</p>
+
+<!-- BOOKING -->
+<section id="booking">
+<h2 class="title">ჩაწერა</h2>
+
+<form onsubmit="sendBooking(event)">
+<input type="text" placeholder="სახელი და გვარი" required />
+<input type="tel" placeholder="ტელეფონის ნომერი" required />
+<input type="email" placeholder="ელ.ფოსტა" required />
+<textarea placeholder="შენიშვნა (თარიღი / სერვისი)"></textarea>
+<button class="btn" type="submit">გაგზავნა</button>
+<p>Facebook: სილამაზის Vision • NB</p>
+<p>TikTok: @makeupvisionnb</p>
+<p>Instagram: @naniko_naniko888</p>
+<p> Mobile: 598 84 85 63</p>
+</form>
+</section>
+
+<footer>
+
+© 2026 NB Vision Studio |
+</footer>
+
+<script>
+function sendBooking(e){
+e.preventDefault();
+alert("თქვენი მოთხოვნა მიღებულია ✔ მალე დაგიკავშირდებით");
+}
+</script>
+
+</body>
+</html>
